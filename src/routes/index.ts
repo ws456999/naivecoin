@@ -54,11 +54,11 @@ router.get('/myUnspentTransactionOutputs', async (ctx, next) => {
 })
 
 router.post('/mineRawBlock', async (ctx, next) => {
-  if (ctx.body.data == null) {
+  if (ctx.request.body.data == null) {
     ctx.body = 'data parameter is missing'
     return
   }
-  const newBlock: Block = generateRawNextBlock(ctx.body.data)
+  const newBlock: Block = generateRawNextBlock(ctx.request.body.data)
   if (newBlock === null) {
     ctx.status = 400
     ctx.body = 'could not generate block'
@@ -88,8 +88,8 @@ router.get('/address', async (ctx, next) => {
 })
 
 router.post('/mineTransaction', async (ctx, next) => {
-  const address = ctx.body.address
-  const amount = ctx.body.amount
+  const address = ctx.request.body.address
+  const amount = ctx.request.body.amount
   try {
     const resp = generatenextBlockWithTransaction(address, amount)
     ctx.body = resp
@@ -102,8 +102,8 @@ router.post('/mineTransaction', async (ctx, next) => {
 
 router.post('/sendTransaction', async (ctx, next) => {
   try {
-    const address = ctx.body.address
-    const amount = ctx.body.amount
+    const address = ctx.request.body.address
+    const amount = ctx.request.body.amount
 
     if (address === undefined || amount === undefined) {
       throw Error('invalid address or amount')
@@ -127,7 +127,7 @@ router.get('/peers', async (ctx, next) => {
   )
 })
 router.post('/addPeer', async (ctx, next) => {
-  connectToPeers(ctx.body.peer)
+  connectToPeers(ctx.request.body.peer)
   // res.send()
 })
 
