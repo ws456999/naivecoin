@@ -1,0 +1,47 @@
+{
+  "name": "naivecoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node entry.ts",
+    "start": "node entry.ts",
+    "prestart": "npm run compile",
+    "compile": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.6",
+    "elliptic": "^6.4.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-onerror": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "lodash": "^4.17.4",
+    "ts-node": "^6.0.5",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^2.8.3",
+    "ws": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^3.1.33",
+    "@types/koa": "^2.0.45",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-logger": "^3.1.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/lodash": "^4.14.85",
+    "@types/node": "^8.0.9",
+    "@types/ws": "^5.1.1",
+    "tslint": "^5.5.0",
+    "tslint-config-standard": "^7.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint-config-standard", "tslint-eslint-rules"],
+  "globals": {
+    "require": true
+  },
+  "rule": {
+    // "space-before-function-paren": ["always"]
+    "space-before-function-paren": false
+  }
+}
