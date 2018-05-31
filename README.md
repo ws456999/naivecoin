@@ -1,8 +1,9 @@
 # naivecoin
 
+> explain how blockchain work and transaction by typescript,
+
 The repository for the naivecoin tutorial: https://lhartikk.github.io/
 
-explain how blockchain work and transaction by typescript,
 
 ```sh
   yarn
